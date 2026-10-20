@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Cinthya Nikol</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="bg-gradient-to-br from-pink-100 via-pink-200 to-rose-300 min-h-screen text-gray-800 font-sans pb-20 relative overflow-x-hidden">
+
+    <!-- Tulipanes de fondo flotantes -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-30">
+        <div class="absolute top-10 left-10 text-pink-400 animate-pulse text-6xl">🌷</div>
+        <div class="absolute top-1/3 right-10 text-pink-500 animate-bounce text-5xl">🌷</div>
+        <div class="absolute bottom-20 left-1/4 text-rose-400 animate-pulse text-6xl">🌷</div>
+        <div class="absolute bottom-10 right-1/3 text-pink-300 animate-pulse text-7xl">💖</div>
+    </div>
+
+    <div class="container mx-auto px-4 py-8 relative z-10 max-w-5xl">
+
+        <!-- HEADER / PORTADA -->
+        <header class="text-center my-8">
+            <span class="inline-block px-4 py-1.5 bg-pink-200 text-pink-700 font-bold rounded-full text-sm uppercase tracking-widest mb-3 shadow-sm border border-pink-300">
+                ✨ Día Especial ✨
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-pink-700 tracking-tight drop-shadow-sm font-serif">
+                CINTHYA NIKOL SANDOVAL PAREDES
+            </h1>
+            <p class="text-2xl md:text-3xl font-bold text-rose-500 mt-2 tracking-wide font-sans">
+                ¡FELIZ CUMPLEAÑOS! 🎉💖
+            </p>
+        </header>
+
+        <!-- SECCIÓN SPAM / FOTO PRINCIPAL -->
+        <section class="my-10 flex flex-col items-center justify-center text-center">
+            
+            <!-- Mensaje flotante animado tipo Spam -->
+            <div id="spamBanner" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 text-white font-bold px-6 py-3 rounded-full shadow-lg text-lg md:text-xl animate-bounce cursor-pointer hover:scale-105 transition-transform duration-300 mb-8 border-2 border-white max-w-full">
+                <i data-lucide="sparkles" class="w-6 h-6 flex-shrink-0"></i>
+                <span>¡PRESIONA TU FOTO Y DESCUBRE LA SORPRESA!</span>
+                <i data-lucide="sparkles" class="w-6 h-6 flex-shrink-0"></i>
+            </div>
+
+            <!-- Marco centrado para la foto de Cinthya -->
+            <div class="relative flex justify-center items-center group">
+                <div class="absolute -inset-2 bg-gradient-to-r from-pink-400 via-rose-400 to-pink-500 rounded-full blur-md opacity-75 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
+                
+                <div id="mainPhotoContainer" class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl cursor-pointer transform hover:scale-105 transition-transform duration-500 bg-pink-100 flex items-center justify-center z-10">
+                    <!-- Foto guardada en: image/cinthya.jpg -->
+                    <img id="cinthyaPhoto" src="image/cinthya.png" alt="Cinthya Nikol Sandoval Paredes" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- CONTENIDO OCULTO HASTA PRESIONAR LA FOTO -->
+        <main id="secretContent" class="hidden space-y-16 mt-12 transition-all duration-700">
+
+            <!-- SECCIÓN: DETALLES & GUSTOS -->
+            <section class="bg-white/80 backdrop-blur-md rounded-3xl p-6 md:p-8 shadow-xl border border-pink-200">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="p-3 bg-pink-100 text-pink-600 rounded-2xl">
+                        <i data-lucide="flower-2" class="w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-pink-700">Tus Detalles Favoritos</h2>
+                        <p class="text-gray-500 text-sm">Lo que te hace única y delicada</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-pink-50/80 p-5 rounded-2xl border border-pink-100">
+                        <h3 class="font-bold text-pink-800 mb-3 flex items-center gap-2">
+                            <i data-lucide="palette" class="w-5 h-5"></i> Tus Tonos de Rosa Favoritos
+                        </h3>
+                        <div class="flex gap-3">
+                            <div class="flex-1 h-16 rounded-xl bg-pink-300 shadow-inner flex items-end p-2 text-xs text-pink-900 font-semibold">Pastel</div>
+                            <div class="flex-1 h-16 rounded-xl bg-pink-400 shadow-inner flex items-end p-2 text-xs text-white font-semibold">Rosa Palo</div>
+                            <div class="flex-1 h-16 rounded-xl bg-rose-400 shadow-inner flex items-end p-2 text-xs text-white font-semibold">Chicle</div>
+                            <div class="flex-1 h-16 rounded-xl bg-pink-500 shadow-inner flex items-end p-2 text-xs text-white font-semibold">Magenta</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-pink-50/80 p-5 rounded-2xl border border-pink-100 flex items-center gap-4">
+                        <div class="text-5xl">🌷</div>
+                        <div>
+                            <h3 class="font-bold text-pink-800">Flores Favoritas</h3>
+                            <p class="text-pink-600 font-medium">Los Tulipanes</p>
+                            <p class="text-xs text-gray-500 mt-1">Símbolo de amor perfecto, elegancia y la feminidad pura que te caracteriza.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: RELATOS & CARTAS (CARDS) -->
+            <section class="bg-white/80 backdrop-blur-md rounded-3xl p-6 md:p-8 shadow-xl border border-pink-200">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="p-3 bg-pink-100 text-pink-600 rounded-2xl">
+                        <i data-lucide="heart-handshake" class="w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-pink-700">Relatos & Cartas Especiales</h2>
+                        <p class="text-gray-500 text-sm">Escritos detallados dedicados especialmente para ti</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-gradient-to-b from-pink-50 to-rose-50 rounded-2xl p-6 border border-pink-200 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between relative">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold text-pink-600 bg-pink-100 px-3 py-1 rounded-full">Carta #1</span>
+                                <i data-lucide="quote" class="text-pink-300 w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-pink-800 mb-3">Encuentro con la Vida</h3>
+                            <p class="text-gray-600 text-sm line-clamp-4 leading-relaxed italic mb-4">
+                                "Hoy es un día especial, un día que marca el inicio de un nuevo capítulo en tu vida y los que te rodean, por que tu forma de ser es única..."
+                            </p>
+                        </div>
+                        <button onclick="openLetterModal('Encuentro con la Vida', 'Hoy es un día especial, un día que marca el inicio de un nuevo capítulo en tu vida, me quedo corto con lo que diré, pero eres la persona más especial que he conocido, tu llegada a mi vida cambio todo lo que pensaba que era importante, y me enseñaste')" 
+                                class="w-full py-2.5 px-4 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-xl text-sm transition-colors duration-200 flex items-center justify-center gap-2">
+                            <i data-lucide="book-open" class="w-4 h-4"></i> Leer carta completa
+                        </button>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-gradient-to-b from-pink-50 to-rose-50 rounded-2xl p-6 border border-pink-200 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between relative">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold text-rose-600 bg-rose-100 px-3 py-1 rounded-full">Carta #2</span>
+                                <i data-lucide="quote" class="text-pink-300 w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-pink-800 mb-3">Tu Esencia Tan Única</h3>
+                            <p class="text-gray-600 text-sm line-clamp-4 leading-relaxed italic mb-4">
+                                "Tu femineidad, tu elegancia y tu gusto refinado por los detalles hacen que todo a tu alrededor se sienta más bonito..."
+                            </p>
+                        </div>
+                        <button onclick="openLetterModal('Tu Esencia Tan Única', 'Tu femineidad, tu elegancia y tu gusto refinado por los detalles hacen que todo a tu alrededor se sienta más bonito. Tu tono rosa favorito refleja la ternura de tu corazón.\\n\\nNunca dejes de sonreír ni de contagiar esa energía tan bonita. Recuerda que cada paso que das deja una huella hermosa en la vida de todos nosotros. ¡Feliz Cumpleaños, Cinthya!')" 
+                                class="w-full py-2.5 px-4 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-xl text-sm transition-colors duration-200 flex items-center justify-center gap-2">
+                            <i data-lucide="book-open" class="w-4 h-4"></i> Leer carta completa
+                        </button>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-gradient-to-b from-pink-50 to-rose-50 rounded-2xl p-6 border border-pink-200 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between relative">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold text-pink-600 bg-pink-100 px-3 py-1 rounded-full">Relato #3</span>
+                                <i data-lucide="quote" class="text-pink-300 w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-pink-800 mb-3">Deseos Infinitos</h3>
+                            <p class="text-gray-600 text-sm line-clamp-4 leading-relaxed italic mb-4">
+                                "En este día tan señalado en el calendario, solo queda desearte abundancia de momentos felices, viajes memorables..."
+                            </p>
+                        </div>
+                        <button onclick="openLetterModal('Deseos Infinitos', 'En este día tan señalado en el calendario, solo queda desearte abundancia de momentos felices, viajes memorables, proyectos exitosos y risas que se queden grabadas en la memoria.\\n\\nQue este espacio sea solo un pequeño homenaje a lo grandiosa que eres. Que cumplas muchísimos años más con esa misma alegría y pasión.')" 
+                                class="w-full py-2.5 px-4 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-xl text-sm transition-colors duration-200 flex items-center justify-center gap-2">
+                            <i data-lucide="book-open" class="w-4 h-4"></i> Leer carta completa
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: GALERÍA DE FOTOS -->
+            <section class="bg-white/80 backdrop-blur-md rounded-3xl p-6 md:p-8 shadow-xl border border-pink-200">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="p-3 bg-pink-100 text-pink-600 rounded-2xl">
+                        <i data-lucide="camera" class="w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-pink-700">Galería de Momentos</h2>
+                        <p class="text-gray-500 text-sm">Recuerdos fotográficos especiales</p>
+                    </div>
+                </div>
+
+                <div id="photoGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="group relative aspect-square rounded-2xl overflow-hidden shadow-md cursor-pointer border-2 border-pink-100" onclick="openLightbox('image/recuerdo.png')">
+                        <img src="image/recuerdo.png" alt="Recuerdo 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-pink-900/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i data-lucide="zoom-in" class="text-white w-8 h-8"></i>
+                        </div>
+                    </div>
+                    <div class="group relative aspect-square rounded-2xl overflow-hidden shadow-md cursor-pointer border-2 border-pink-100" onclick="openLightbox('image/image.png')">
+                        <img src="image/image.png" alt="Recuerdo 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-pink-900/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i data-lucide="zoom-in" class="text-white w-8 h-8"></i>
+                        </div>
+                    </div>
+                    <div class="group relative aspect-square rounded-2xl overflow-hidden shadow-md cursor-pointer border-2 border-pink-100" onclick="openLightbox('image/image copy.png')">
+                        <img src="image/image copy.png" alt="Recuerdo 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-pink-900/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i data-lucide="zoom-in" class="text-white w-8 h-8"></i>
+                        </div>
+                    </div>
+                    <div class="group relative aspect-square rounded-2xl overflow-hidden shadow-md cursor-pointer border-2 border-pink-100" onclick="openLightbox('image/image copy 2.png')">
+                        <img src="image/image copy 2.png" alt="Recuerdo 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-pink-900/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i data-lucide="zoom-in" class="text-white w-8 h-8"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: VIDEOS -->
+            <section class="bg-white/80 backdrop-blur-md rounded-3xl p-6 md:p-8 shadow-xl border border-pink-200">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="p-3 bg-pink-100 text-pink-600 rounded-2xl">
+                        <i data-lucide="video" class="w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-pink-700">Videos Especiales</h2>
+                        <p class="text-gray-500 text-sm">Grabaciones y momentos guardados</p>
+                    </div>
+                </div>
+
+                <div id="videoGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-pink-50 p-3 rounded-2xl border border-pink-200 shadow-sm">
+                        <video controls class="w-full rounded-xl max-h-80 object-cover bg-black">
+                            <source src="movie/dedicatoria.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                        <p class="text-center text-sm text-pink-700 font-semibold mt-2">Momento Especial 1 🎥</p>
+                    </div>
+
+                    <div class="bg-pink-50 p-3 rounded-2xl border border-pink-200 shadow-sm">
+                        <video controls class="w-full rounded-xl max-h-80 object-cover bg-black">
+                            <source src="movie/video2.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                        <p class="text-center text-sm text-pink-700 font-semibold mt-2">Momento Especial 2 🎥</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="mt-16 text-center text-pink-600 font-medium text-sm">
+            Hecho con 💖 para Cinthya Nikol Sandoval Paredes
+        </footer>
+
+    </div>
+
+    <!-- MODAL PARA LEER CARTAS EXTENSAS -->
+    <div id="letterModal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm" onclick="closeLetterModal(event)">
+        <div class="bg-white rounded-3xl p-6 md:p-8 max-w-2xl w-full border-2 border-pink-300 shadow-2xl relative my-8 max-h-[85vh] overflow-y-auto" onclick="event.stopPropagation()">
+            <button onclick="closeLetterModal()" class="absolute top-4 right-4 text-pink-400 hover:text-pink-600 p-2 rounded-full hover:bg-pink-50 transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div class="flex items-center gap-3 mb-4">
+                <span class="text-3xl">🌷</span>
+                <h3 id="modalTitle" class="text-2xl font-bold text-pink-800">Título de la Carta</h3>
+            </div>
+            <div class="w-full h-0.5 bg-pink-100 my-3"></div>
+            <div id="modalBody" class="text-gray-700 text-base leading-relaxed whitespace-pre-line space-y-4 my-4 font-serif">
+                <!-- Contenido completo de la carta -->
+            </div>
+            <div class="mt-6 text-right">
+                <button onclick="closeLetterModal()" class="px-6 py-2.5 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-xl text-sm transition-colors shadow-md">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX PARA AMPLIAR FOTOS -->
+    <div id="lightbox" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm" onclick="closeLightbox()">
+        <div class="relative max-w-3xl max-h-[90vh]">
+            <img id="lightboxImg" src="" alt="Foto ampliada" class="rounded-2xl shadow-2xl max-h-[85vh] object-contain">
+            <button class="absolute -top-10 right-0 text-white hover:text-pink-300 text-xl font-bold bg-pink-600/50 rounded-full w-8 h-8 flex items-center justify-center">✕</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
